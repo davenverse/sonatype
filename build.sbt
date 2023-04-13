@@ -36,7 +36,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform)
   .settings(
     name := "sonatype",
     scalacOptions -= "-Xfatal-warnings",
-    crossScalaVersions := Seq("2.12.15", "3.1.1", Scala213),
+    crossScalaVersions := Seq("2.12.15", "3.1.3", Scala213),
 
     libraryDependencies ++= Seq(
       "org.typelevel"               %%% "cats-core"                  % catsV,
