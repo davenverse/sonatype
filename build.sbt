@@ -12,7 +12,7 @@ ThisBuild / tlSonatypeUseLegacyHost := true
 
 val Scala213 = "2.13.7"
 
-// ThisBuild / crossScalaVersions := Seq("2.12.15", Scala213)
+// ThisBuild / crossScalaVersions := Seq("2.12.17", Scala213)
 ThisBuild / scalaVersion := Scala213
 
 ThisBuild / testFrameworks += new TestFramework("munit.Framework")
@@ -36,7 +36,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform)
   .settings(
     name := "sonatype",
     scalacOptions -= "-Xfatal-warnings",
-    crossScalaVersions := Seq("2.12.15", "3.1.1", Scala213),
+    crossScalaVersions := Seq("2.12.17", "3.1.1", Scala213),
 
     libraryDependencies ++= Seq(
       "org.typelevel"               %%% "cats-core"                  % catsV,
