@@ -7,10 +7,9 @@ ThisBuild / developers := List(
   tlGitHubDev("christopherdavenport", "Christopher Davenport")
 )
 ThisBuild / tlCiReleaseBranches := Seq("main")
-ThisBuild / tlSonatypeUseLegacyHost := true
 
 
-val Scala213 = "2.13.7"
+val Scala213 = "2.13.18"
 
 // ThisBuild / crossScalaVersions := Seq("2.12.15", Scala213)
 ThisBuild / scalaVersion := Scala213
@@ -36,7 +35,7 @@ lazy val core = crossProject(JVMPlatform, JSPlatform)
   .settings(
     name := "sonatype",
     scalacOptions -= "-Xfatal-warnings",
-    crossScalaVersions := Seq("2.12.15", "3.1.1", Scala213),
+    crossScalaVersions := Seq("2.12.15", "3.3.8", Scala213),
 
     libraryDependencies ++= Seq(
       "org.typelevel"               %%% "cats-core"                  % catsV,
